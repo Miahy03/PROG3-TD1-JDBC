@@ -28,7 +28,7 @@ public class DataRetriever {
         catch (SQLException e) {
             throw new SQLException(e);
         }
-    }
+    } 
     public List<Product> getProductList(int page,int size) throws SQLException {
         String sql = "SELECT p.id, p.name, p.creation_datetime, c.id, c.name FROM Product as p JOIN Product_category as c on p.id = c.product_id" + " ORDER BY p.id" +  " LIMIT " + size + " OFFSET " + (page * size - size) ;
         List<Product> products = new ArrayList<>();
