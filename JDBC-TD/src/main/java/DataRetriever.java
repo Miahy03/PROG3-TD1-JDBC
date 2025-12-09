@@ -23,7 +23,7 @@ public class DataRetriever {
             while (rs.next()) {
                 categories.add(new Category(rs.getInt("id"), rs.getString("name")));
             }
-            return categories;
+            return categories; 
         }
         catch (SQLException e) {
             throw new SQLException(e);
@@ -34,7 +34,7 @@ public class DataRetriever {
         List<Product> products = new ArrayList<>();
         try(PreparedStatement statement = connection.prepareStatement(sql);
             ResultSet rs = statement.executeQuery();
-        ){
+        ){ 
             while (rs.next()) {
                 products.add(new org.example.Product(rs.getInt(1),
                         rs.getString(2),
