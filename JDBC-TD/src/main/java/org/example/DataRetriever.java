@@ -1,3 +1,6 @@
+package org.example;
+
+
 import org.example.Category;
 import org.example.Product;
 

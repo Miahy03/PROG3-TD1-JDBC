@@ -5,6 +5,10 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DBConnection {
+    public static Connection getConnection() {
+        return null;
+    }
+
     public Connection getDBConnection() throws SQLException {
         try {
             String DB_URL = "jdbc:postgresql://localhost:5432/product_management_db";
